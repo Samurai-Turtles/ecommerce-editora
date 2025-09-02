@@ -1,0 +1,7 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      dockerfile: Dockerfile.backend
+    ports:
+      - 3306:3000
