@@ -1,0 +1,30 @@
+# Node.js dependencies (reinstalled in container)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build output (recreated in container build stage)
+dist
+
+# Docker-related files (not needed inside the image)
+.dockerignore
+docker-compose.yml
+Dockerfile*
+ 
+# Local configuration / environment files
+.env
+.env.* 
+
+# OS / editor / tooling junk
+*.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+.vscode
+.idea
+
+# Docs and non-runtime assets
+README.md
+project-specification.pdf
+eslint.config.js
