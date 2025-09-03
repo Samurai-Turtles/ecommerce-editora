@@ -1,0 +1,23 @@
+# Stage 1: Build application
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install application dependencies
+COPY package.json package-lock.json /app/
+RUN npm install
+
+# Build application from source
+COPY . .
+RUN npm run build
+
+# Stage 2: Serve application with Nginx
+FROM nginx:alpine
+
+# Replace default contents of Nginx with application code
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD [ "nginx", "-g", "daemon off;" ]

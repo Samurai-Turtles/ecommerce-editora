@@ -1,7 +1,14 @@
 services:
+  frontend:
+    container_name: frontend
+    build:
+      dockerfile: Dockerfile.frontend
+    ports:
+      - 5173:80
+
   backend:
     container_name: backend
     build:
       dockerfile: Dockerfile.backend
     ports:
-      - 3306:3000
+      - 3000:3000
