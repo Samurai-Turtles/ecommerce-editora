@@ -1,10 +1,17 @@
-import "normalize.css"
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import "normalize.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
+import Logomark from "./components/logomark/logomark.jsx";
+import Logotype from "./components/logotype/logotype.jsx";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+    <Logotype size={"large"} />
+    <Logotype size={"medium"} />
+    <Logomark size={"large"} />
+    <Logomark size={"medium"} />
+  </StrictMode>
+);
