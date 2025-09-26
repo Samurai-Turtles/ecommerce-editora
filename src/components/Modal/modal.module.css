@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  opacity: 0.6
+}
+
+.modalBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1em .75em;
+  border-radius: .75em;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: .75em;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: .8em;
+  right: .8em;
+}
