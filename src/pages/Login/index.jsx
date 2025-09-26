@@ -1,6 +1,7 @@
 import Form, { PasswordInput, TextInput } from "@/components/Form";
 import Logotype from "@/components/logotype/logotype";
 import styles from "./login.module.css";
+import loginHero from "@/assets/img/login-hero.jpg"
 
 function LoginPage() {
   return (
@@ -14,7 +15,7 @@ function LoginPage() {
         </Form>
       </div>
       <div className={styles.heroImage}>
-        <img src="https://picsum.photos/100/100" alt="" />
+        <img src={loginHero} alt="Hero image" />
       </div>
     </div>
   )

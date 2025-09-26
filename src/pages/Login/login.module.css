@@ -19,6 +19,7 @@
 
 .heroImage {
   position: relative;
+  max-height: 100vh;
 }
 
 .heroImage img {
