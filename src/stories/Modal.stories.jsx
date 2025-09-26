@@ -10,9 +10,7 @@ export const Default = {
     title: "Modal title",
     children: (
       <>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rem
-        quae magnam fuga incidunt tempore minus exercitationem alias ex
-        inventore!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </>
     ),
   },
