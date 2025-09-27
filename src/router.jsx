@@ -1,4 +1,5 @@
 import LoginPage from "@/pages/Login";
+import ShoppingCart from "@/pages/ShoppingCart";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -24,11 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: <h1>Cart route</h1>,
+    Component: ShoppingCart,
   },
   {
     path: "/payment",
-    element: <h1>Payment route</h1>
+    element: <h1>Payment route</h1>,
   },
 ]);
 
