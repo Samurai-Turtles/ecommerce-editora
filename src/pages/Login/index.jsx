@@ -1,10 +1,13 @@
 import loginHero from "@/assets/img/login-hero.jpg";
+import customerIcon from "@/assets/img/customer-icon.png";
+import salesmanIcon from "@/assets/img/salesman-icon.png";
 import Form, { PasswordInput, TextInput } from "@/components/Form";
 import Logotype from "@/components/logotype/logotype";
 import Modal from "@/components/Modal";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import styles from "./login.module.css";
+import Card from "@/components/card/card";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -65,8 +68,12 @@ function LoginPage() {
           <div className={styles.signupModal}>
             <span>Which profile fits you best?</span>
             <div className={styles.signupModalOptions}>
-              <button onClick={handleSignupChoice}>Customer</button>
-              <button onClick={handleSignupChoice}>Salesman</button>
+              <Card image={customerIcon} handleClick={handleSignupChoice}>
+                <strong>Customer</strong>
+              </Card>
+              <Card image={salesmanIcon} handleClick={handleSignupChoice}>
+                <strong>Salesman</strong>
+              </Card>
             </div>
           </div>
         </Modal>
