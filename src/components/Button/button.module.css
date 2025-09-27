@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .25em;
+  padding: .75em;
+  border-radius: .5em;
+}
+
+.dimmedButton {
+  border: 1px solid gray;
+  background-color: transparent;
+  color: black;
+}
+
+.dimmedButton:hover {
+  background-color: gray;
+}
+
+.solidButton {
+  background-color: black;
+  color: white;
+}
+
+.solidButton:hover {
+  background-color: #1a1a1a;
+}
