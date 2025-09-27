@@ -1,4 +1,5 @@
 import LoginPage from "@/pages/Login";
+import SignupPage from "@/pages/Signup";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/signup",
-    element: <h1>Signup route</h1>,
+    Component: SignupPage,
   },
   {
     path: "/orders",

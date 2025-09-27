@@ -36,6 +36,15 @@ function PasswordInput({ id }) {
   );
 }
 
+function ConfirmPasswordInput({ id }) {
+  return (
+    <div className={styles.formInput}>
+      <label htmlFor={id}>Confirm Password</label>
+      <input id={id} type="password" placeholder="Confirm your password..." />
+    </div>
+  );
+}
+
 function FormLink({ href, label, action }) {
   return (
     <a href={href} onClick={action} className={styles.formLink}>
@@ -45,4 +54,4 @@ function FormLink({ href, label, action }) {
 }
 
 export default Form;
-export { TextInput, PasswordInput, FormLink };
+export { TextInput, PasswordInput, ConfirmPasswordInput, FormLink };
