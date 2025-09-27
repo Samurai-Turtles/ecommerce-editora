@@ -38,3 +38,16 @@
   height: 80%;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .6));
 }
+
+.signupModal span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.signupModalOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: .4em;
+}
