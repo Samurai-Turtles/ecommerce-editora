@@ -31,7 +31,7 @@ function PasswordInput({ id }) {
   return (
     <div className={styles.formInput}>
       <label htmlFor={id}>Password</label>
-      <input id={id} type="password" placeholder="Insert your password..." />
+      <input id={id} name={id} type="password" placeholder="Insert your password..." />
     </div>
   );
 }
@@ -40,7 +40,7 @@ function ConfirmPasswordInput({ id }) {
   return (
     <div className={styles.formInput}>
       <label htmlFor={id}>Confirm Password</label>
-      <input id={id} type="password" placeholder="Confirm your password..." />
+      <input id={id} name={id} type="password" placeholder="Confirm your password..." />
     </div>
   );
 }

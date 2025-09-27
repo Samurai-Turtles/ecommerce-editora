@@ -13,12 +13,41 @@ function SignupPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [errorExists] = useState(false); // TODO: implement changing state (possibly when the two passwords are different) and allow changing the error message.
+  const [errorMessage, setErrorMessage] = useState("");
   const isCustomerFromNav = location.state?.isCustomer ?? true;
   const [isCustomer] = useState(isCustomerFromNav);
 
+  const validatePassword = (event) => {
+    const formData = new FormData(event.target);
+    const password = formData.get("password");
+    const confirmPassword = formData.get("confirmPassword");
+
+    if (!password) {
+      setErrorMessage("Please insert your password!");
+      return false;
+    }
+
+    if (!confirmPassword) {
+      setErrorMessage("Please confirm your password!");
+      return false;
+    }
+
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match!");
+      return false;
+    }
+
+    setErrorMessage("");
+    return true;
+  };
+
   const handleSignup = (event) => {
     event.preventDefault();
+
+    if (!validatePassword(event)) {
+        return;
+    }
+    
     alert("Signup successful");
     navigate("/");
   };
@@ -33,7 +62,7 @@ function SignupPage() {
           {isCustomer ? (
             <>
               <TextInput
-                id="name"
+                id="customerName"
                 label="Name"
                 placeholder="Insert your name..."
               />
@@ -45,21 +74,21 @@ function SignupPage() {
             </>
           ) : (
             <TextInput
-              id="name"
+              id="storeName"
               label="Store name"
               placeholder="Insert the store's name..."
             />
           )}
           <TextInput id="email" label="Email" placeholder="user@mail.com" />
           <PasswordInput id="password" />
-          {errorExists && (
+          <ConfirmPasswordInput id="confirmPassword" />
+          {errorMessage && (
             <>
               <div className={styles.errorMessage}>
-                <p>Error message here</p>
+                <p>{errorMessage}</p>
               </div>
             </>
           )}
-          <ConfirmPasswordInput id="confirmPassword" />
         </Form>
       </div>
     </div>
