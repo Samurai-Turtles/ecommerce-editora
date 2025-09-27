@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  gap: .75em;
+  border: 1px solid lightgray;
+  padding: 1.5em 1em;
+  border-radius: .8em;
+}
+
+.form ul {
+  display: flex;
+  flex-direction: column;
+  gap: .75em;
+  margin: 1em 0 0 0;
+  padding: 0;
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+.formInput label {
+  display: block;
+  margin-bottom: .3em;
+}
+
+.formInput input {
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: .4em .7em;
+  border-radius: .5em;
+}
+
+.submitButton {
+  background-color: #1a1a1a;
+  color: white;
+  padding: .4em .7em;
+  border-radius: .5em;
+}
