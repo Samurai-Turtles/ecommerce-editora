@@ -49,7 +49,7 @@ function SignupPage() {
     }
     
     alert("Signup successful");
-    navigate("/");
+    navigate("/login");
   };
 
   return (
