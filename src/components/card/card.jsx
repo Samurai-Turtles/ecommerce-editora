@@ -1,11 +1,16 @@
 import styles from "./card.module.css";
 
-export default function Card({ image, children }) {
-
+function Card({ image, children }) {
   return (
-    <div className={styles.container}>
-      {image && <img src={image} alt="Card image" />}
-      {children}
+    <div className={styles.cardContainer}>
+      {/* Card image */}
+      <div className={styles.cardImage}>
+        <img src={image} alt="Card image" />
+      </div>
+      {/* Card body */}
+      <div className={styles.cardBody}>{children}</div>
     </div>
   );
 }
+
+export default Card;
