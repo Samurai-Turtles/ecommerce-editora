@@ -1,0 +1,23 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 16px;
+  padding: 16px;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #d3d3d3;
+  width: 16.375rem;
+  height: 21.75rem;
+}
+
+p {
+  margin: 0;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+}
