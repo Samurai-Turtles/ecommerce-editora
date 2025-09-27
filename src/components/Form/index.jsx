@@ -1,19 +1,15 @@
 import styles from "./form.module.css";
 
-function Form({ submitTo, children, btnLabel, actions }) {
+function Form({ submitTo, children, btnLabel, handleSubmit, actions }) {
   return (
-    <form action={submitTo} className={styles.form}>
+    <form action={submitTo} className={styles.form} onSubmit={handleSubmit}>
       {children}
       <button className={styles.submitButton}>{btnLabel}</button>
       {actions && (
         <ul>
           {actions.map((item) => (
             <li key={item.href}>
-              <FormLink
-                href={item.href}
-                label={item.label}
-                action={item.action}
-              />
+              <FormLink {...item} />
             </li>
           ))}
         </ul>

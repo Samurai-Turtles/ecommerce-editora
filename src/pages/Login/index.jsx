@@ -18,6 +18,12 @@ function LoginPage() {
     navigate("/signup");
   };
 
+  const handleLogin = (event) => {
+    event.preventDefault();
+    alert("Login successful");
+    navigate("/");
+  };
+
   const actions = [
     {
       href: "#",
@@ -37,7 +43,12 @@ function LoginPage() {
       <div className={styles.loginForm}>
         <Logotype />
         <span>It's good to have you back!</span>
-        <Form submitTo="/login" btnLabel="Sign in" actions={actions}>
+        <Form
+          submitTo="/login"
+          btnLabel="Sign in"
+          actions={actions}
+          handleSubmit={handleLogin}
+        >
           <TextInput id="email" label="Email" placeholder="user@mail.com" />
           <PasswordInput id="password" />
         </Form>
