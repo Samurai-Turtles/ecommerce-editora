@@ -1,5 +1,8 @@
 import LoginPage from "@/pages/Login";
 import ShoppingCart from "@/pages/ShoppingCart";
+import PixPage from "@/pages/PixPayment";
+import OrderSubmittedPage from "@/pages/OrderSubmitted";
+import CreditCardPage from "./pages/CreditCardPayment";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
   {
     path: "/payment",
     element: <h1>Payment route</h1>,
+  },
+  {
+    path: "/pix",
+    Component: PixPage,
+  },
+  {
+    path: "/order-submitted",
+    Component: OrderSubmittedPage,
+  },
+  {
+    path: "/credit-card",
+    Component: CreditCardPage,
   },
 ]);
 
