@@ -1,4 +1,5 @@
 import LoginPage from "@/pages/Login";
+import OrdersPage from "@/pages/Orders";
 import ShoppingCart from "@/pages/ShoppingCart";
 import PixPage from "@/pages/PixPayment";
 import OrderSubmittedPage from "@/pages/OrderSubmitted";
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/orders",
-    element: <h1>Orders route</h1>,
+    Component: OrdersPage,
   },
   {
     path: "/products",
