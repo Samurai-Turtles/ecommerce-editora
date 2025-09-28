@@ -8,11 +8,34 @@
   font-weight: bold;
 }
 
-.orders {
+.products {
   display: flex;
+  flex-direction: column;
   gap: 16px;
+  align-items: center;
 }
 
-.orders * {
-  flex-grow: 1;
+.products * {
+  align-items: stretch;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1.5rem;
+}
+
+.statusDelivered {
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 0;
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.statusEnRoute {
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin: 0;
+  background-color: rgb(231, 231, 117);
+  color: rgb(172, 145, 23);
 }
