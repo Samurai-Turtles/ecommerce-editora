@@ -1,23 +1,16 @@
-.productsPage {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 1em;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+.productGrid button {
+  width: 100%;
 }
 
-.sorting {
-    display: flex;
-    justify-content: end;
-
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    align-items: center;
+.priceTag {
+  display: block;
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
 }
