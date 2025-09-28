@@ -9,11 +9,13 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "dev:backend": "json-server --host 0.0.0.0 --port 3000 --watch db.json"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "clsx": "^2.1.1",
+    "json-server": "^1.0.0-beta.3",
     "normalize.css": "^8.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
