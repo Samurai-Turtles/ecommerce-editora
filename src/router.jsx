@@ -1,4 +1,5 @@
 import LoginPage from "@/pages/Login";
+import OrdersPage from "@/pages/Orders";
 import SignupPage from "@/pages/Signup";
 import ProductsPage from "@/pages/Products";
 import ShoppingCart from "@/pages/ShoppingCart";
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/orders",
-    element: <h1>Orders route</h1>,
+    Component: OrdersPage,
   },
   {
     path: "/products",
