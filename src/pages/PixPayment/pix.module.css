@@ -1,0 +1,127 @@
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 1.2rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.backBtn {
+  border: 0;
+  background: #e9e9e9;
+  padding: 0.6rem 0.75rem;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.main {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.qr {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.title {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.08;
+}
+
+.codeBox {
+  background: #e9e9e9;
+  border-radius: 12px;
+  padding: 0.8rem;
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.codeText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 1.05rem;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.25rem;
+  flex: 1 1 auto;
+  line-height: 1.2;
+}
+
+.copyBtn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #2b2b2b;
+  color: #fff;
+  border: 0;
+  border-radius: 44px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.logoWrap {
+  margin-top: 1rem;
+}
+
+.pixLogo {
+  width: 180px;
+  height: auto;
+  opacity: 0.98;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+
