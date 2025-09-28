@@ -1,17 +1,21 @@
 import sampleBookCover from "@/assets/img/sample-book-cover.jpg";
+import pixLogomark from "@/assets/img/pix-logomark.png"
+import creditCard from "@/assets/img/mastercard.png"
 
 import Button from "@/components/Button";
 import Card from "@/components/card/card";
-import { TrashIcon } from "@phosphor-icons/react";
-import styles from "./shopping-cart.module.css";
+import Modal from "@/components/Modal";
 import { fetchProducts, formatAsCurrency } from "@/lib/products";
+import { TrashIcon, CheckFatIcon } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import styles from "./shopping-cart.module.css";
 
 function ShoppingCart() {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [totalValue, setTotalValue] = useState(0);
-  const navigate = useNavigate();
+  const [isPaymentModalOn, setIsPaymentModalOn] = useState(false);
 
   const handleProductRemoval = (id) => {
     setProducts(products.filter((product) => product.id != id));
@@ -19,6 +23,10 @@ function ShoppingCart() {
 
   const handleClearCart = () => {
     setProducts([]);
+  };
+
+  const handlePaymentModalChange = () => {
+    setIsPaymentModalOn(!isPaymentModalOn);
   };
 
   useEffect(() => {
@@ -56,7 +64,6 @@ function ShoppingCart() {
           ))}
         </ul>
       </div>
-
       {/* Costs and delivery info */}
       <div className={styles.cartInfo}>
         <h2>
@@ -70,13 +77,28 @@ function ShoppingCart() {
             handleClick={handleClearCart}
           />
           <Button
-            Icon={TrashIcon}
+            Icon={CheckFatIcon}
             label="Close order"
             btnStyle="solid"
-            handleClick={() => navigate("/payment")}
+            handleClick={handlePaymentModalChange}
           />
         </div>
       </div>
+      {isPaymentModalOn && (
+        <Modal handleCloseModal={() => setIsPaymentModalOn(false)}>
+          <div className={styles.paymentModal}>
+            <span>Select payment method</span>
+            <div className={styles.paymentModalOptions}>
+              <Card image={pixLogomark} handleClick={() => navigate("/pix")}>
+                <strong>Pix</strong>
+              </Card>
+              <Card image={creditCard} handleClick={() => navigate("/credit-card")}>
+                <strong>Credit card</strong>
+              </Card>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }
