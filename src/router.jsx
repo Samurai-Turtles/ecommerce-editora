@@ -1,5 +1,6 @@
 import LoginPage from "@/pages/Login";
 import SignupPage from "@/pages/Signup";
+import ProductsPage from "@/pages/Products";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <h1>Products route</h1>,
+    Component: ProductsPage,
   },
   {
     path: "/cart",

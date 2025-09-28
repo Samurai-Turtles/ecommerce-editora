@@ -1,0 +1,23 @@
+.productsPage {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sorting {
+    display: flex;
+    justify-content: end;
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: center;
+}
