@@ -3,7 +3,7 @@ import styles from "./credit.module.css";
 import Form, { TextInput } from "@/components/Form";
 import { useNavigate } from "react-router";
 import visaImg from "@/assets/img/visa.png";
-import mcImg from "@/assets/img/mastercard.png";
+import mcImg from "@/assets/img/mastercard.webp";
 
 export default function CreditCardPayment() {
   const navigate = useNavigate();
