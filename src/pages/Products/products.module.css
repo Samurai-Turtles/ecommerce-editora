@@ -1,0 +1,16 @@
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 1em;
+}
+
+.productGrid button {
+  width: 100%;
+}
+
+.priceTag {
+  display: block;
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}

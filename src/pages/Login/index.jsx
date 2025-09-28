@@ -17,8 +17,8 @@ function LoginPage() {
     setIsSignupOptionActive(!isSignupOptionActive);
   };
 
-  const handleSignupChoice = () => {
-    navigate("/signup");
+  const handleSignupChoice = (isCustomer) => {
+    navigate("/signup", { state: { isCustomer: isCustomer } });
   };
 
   const handleLogin = (event) => {
@@ -68,10 +68,13 @@ function LoginPage() {
           <div className={styles.signupModal}>
             <span>Which profile fits you best?</span>
             <div className={styles.signupModalOptions}>
-              <Card image={customerIcon} handleClick={handleSignupChoice}>
+              <Card image={customerIcon} handleClick={() => handleSignupChoice(true)}>
                 <strong>Customer</strong>
               </Card>
-              <Card image={salesmanIcon} handleClick={handleSignupChoice}>
+              <Card
+                image={salesmanIcon}
+                handleClick={() => handleSignupChoice(false)}
+              >
                 <strong>Salesman</strong>
               </Card>
             </div>
