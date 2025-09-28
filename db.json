@@ -1,6 +1,88 @@
 {
   "products": [
-    { "id": "1", "title": "Book 1", "price": 50 },
-    { "id": "2", "title": "Book 2", "price": 200 }
+    {
+      "id": "1",
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "price": 80,
+      "themes": ["Algorithms", "Data Structures", "Complexity"]
+    },
+    {
+      "id": "2",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "price": 45,
+      "themes": ["Software Engineering", "Best Practices", "Coding Standards"]
+    },
+    {
+      "id": "3",
+      "title": "Design Patterns",
+      "author": "Erich Gamma",
+      "price": 60,
+      "themes": ["Software Design", "Patterns", "Object-Oriented Programming"]
+    },
+    {
+      "id": "4",
+      "title": "Artificial Intelligence: A Modern Approach",
+      "author": "Stuart Russell",
+      "price": 90,
+      "themes": ["AI", "Machine Learning", "Search Algorithms"]
+    },
+    {
+      "id": "5",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "price": 50,
+      "themes": ["Software Development", "Best Practices", "Programming"]
+    },
+    {
+      "id": "6",
+      "title": "Structure and Interpretation of Computer Programs",
+      "author": "Harold Abelson",
+      "price": 70,
+      "themes": ["Programming", "Computer Science Theory", "Lisp"]
+    },
+    {
+      "id": "7",
+      "title": "Code Complete",
+      "author": "Steve McConnell",
+      "price": 55,
+      "themes": ["Software Engineering", "Coding Techniques", "Quality"]
+    },
+    {
+      "id": "8",
+      "title": "Compilers: Principles, Techniques, and Tools",
+      "author": "Alfred Aho",
+      "price": 100,
+      "themes": ["Compilers", "Programming Languages", "Theory"]
+    },
+    {
+      "id": "9",
+      "title": "Introduction to the Theory of Computation",
+      "author": "Michael Sipser",
+      "price": 85,
+      "themes": ["Theory of Computation", "Automata", "Complexity"]
+    },
+    {
+      "id": "10",
+      "title": "Deep Learning",
+      "author": "Ian Goodfellow",
+      "price": 120,
+      "themes": ["Machine Learning", "Neural Networks", "AI"]
+    },
+    {
+      "id": "11",
+      "title": "Python Crash Course",
+      "author": "Eric Matthes",
+      "price": 35,
+      "themes": ["Python", "Programming", "Beginner Friendly"]
+    },
+    {
+      "id": "12",
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "price": 65,
+      "themes": ["Code Quality", "Refactoring", "Software Engineering"]
+    }
   ]
 }

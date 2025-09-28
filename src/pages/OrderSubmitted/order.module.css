@@ -1,0 +1,51 @@
+.page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.iconWrap {
+  margin-bottom: 0.5rem;
+}
+
+.checkImg {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.title {
+  font-size: 3.2rem; 
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.02;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700; /* negrito */
+  color: #111;
+  max-width: 2082px;
+}

@@ -1,0 +1,54 @@
+import LoginPage from "@/pages/Login";
+import OrdersPage from "@/pages/Orders";
+import SignupPage from "@/pages/Signup";
+import ProductsPage from "@/pages/Products";
+import ShoppingCart from "@/pages/ShoppingCart";
+import PixPage from "@/pages/PixPayment";
+import OrderSubmittedPage from "@/pages/OrderSubmitted";
+import CreditCardPage from "./pages/CreditCardPayment";
+import { createBrowserRouter } from "react-router";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <h1>Root route</h1>,
+  },
+  {
+    path: "/login",
+    Component: LoginPage,
+  },
+  {
+    path: "/signup",
+    Component: SignupPage,
+  },
+  {
+    path: "/orders",
+    Component: OrdersPage,
+  },
+  {
+    path: "/products",
+    Component: ProductsPage,
+  },
+  {
+    path: "/cart",
+    Component: ShoppingCart,
+  },
+  {
+    path: "/payment",
+    element: <h1>Payment route</h1>,
+  },
+  {
+    path: "/pix",
+    Component: PixPage,
+  },
+  {
+    path: "/order-submitted",
+    Component: OrderSubmittedPage,
+  },
+  {
+    path: "/credit-card",
+    Component: CreditCardPage,
+  },
+]);
+
+export default router;

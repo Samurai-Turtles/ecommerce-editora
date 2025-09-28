@@ -1,0 +1,57 @@
+.shoppingCart {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  padding: 1em;
+}
+
+.cartProducts h2 {
+  margin-bottom: .75em;
+}
+
+.cartProducts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.cartProducts ul button {
+  width: 100%;
+}
+
+.cartInfo {
+  padding: 1.25em;
+  border-radius: 1em;
+  background-color: lightgray;
+  height: fit-content;
+}
+
+.cartActions {
+  display: flex;
+  gap: .5em;
+  margin-top: 1em;
+}
+
+.cartActions button {
+  flex-grow: 1;
+}
+
+.priceTag {
+  display: block;
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+
+.paymentModal span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.paymentModalOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: .4em;
+}
