@@ -44,11 +44,12 @@ const productList = [
 ];
 
 export function fetchProducts() {
-  return productList.map((item) => ({
-    ...item,
-    price: new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-    }).format(item.price),
-  }));
+  return productList;
+}
+
+export function formatAsCurrency(value) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(value);
 }

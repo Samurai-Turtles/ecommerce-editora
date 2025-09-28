@@ -4,10 +4,35 @@ import Button from "@/components/Button";
 import Card from "@/components/card/card";
 import { TrashIcon } from "@phosphor-icons/react";
 import styles from "./shopping-cart.module.css";
-import { fetchProducts } from "@/lib/products";
+import { fetchProducts, formatAsCurrency } from "@/lib/products";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 function ShoppingCart() {
-  const products = fetchProducts();
+  const [products, setProducts] = useState([]);
+  const [totalValue, setTotalValue] = useState(0);
+  const navigate = useNavigate();
+
+  const handleProductRemoval = (id) => {
+    setProducts(products.filter((product) => product.id != id));
+  };
+
+  const handleClearCart = () => {
+    setProducts([]);
+  };
+
+  useEffect(() => {
+    const products = fetchProducts();
+    setProducts(products);
+  }, []);
+
+  useEffect(() => {
+    const productSum = products.reduce(
+      (acc, current) => acc + current.price,
+      0
+    );
+    setTotalValue(productSum);
+  }, [products]);
 
   return (
     <div className={styles.shoppingCart}>
@@ -16,11 +41,17 @@ function ShoppingCart() {
         <h2>My shopping cart</h2>
         <ul>
           {products.map((item) => (
-            <Card key={item.id} image={sampleBookCover}>
+            <Card key={item.id} image={sampleBookCover} style="horizontal">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <strong className={styles.priceTag}>{item.price}</strong>
-              <Button Icon={TrashIcon} label="Remove" handleClick={() => alert("Remove item from cart!")} />
+              <strong className={styles.priceTag}>
+                {formatAsCurrency(item.price)}
+              </strong>
+              <Button
+                Icon={TrashIcon}
+                label="Remove"
+                handleClick={() => handleProductRemoval(item.id)}
+              />
             </Card>
           ))}
         </ul>
@@ -29,20 +60,20 @@ function ShoppingCart() {
       {/* Costs and delivery info */}
       <div className={styles.cartInfo}>
         <h2>
-          Total value: <span>$ 0,00</span>
+          Total value: <span>{formatAsCurrency(totalValue)}</span>
         </h2>
         <div className={styles.cartActions}>
           <Button
             Icon={TrashIcon}
             label="Clear cart"
             btnStyle="dimmed"
-            handleClick={() => alert("Clear cart")}
+            handleClick={handleClearCart}
           />
           <Button
             Icon={TrashIcon}
             label="Close order"
             btnStyle="solid"
-            handleClick={() => alert("Close order")}
+            handleClick={() => navigate("/payment")}
           />
         </div>
       </div>
